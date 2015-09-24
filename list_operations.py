@@ -121,7 +121,7 @@ def middle(input_list):
 
     """
 
-    return []
+    return input_list[2:-2]
 
 
 def inner_four(input_list):
@@ -135,7 +135,7 @@ def inner_four(input_list):
 
     """
 
-    return []
+    return input_list[2:6]
 
 
 def inner_four_end(input_list):
@@ -150,7 +150,7 @@ def inner_four_end(input_list):
 
     """
 
-    return []
+    return input_list[-6:-2]
 
 
 def replace_head(input_list):
