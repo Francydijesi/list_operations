@@ -336,8 +336,10 @@ def custom_insert(input_list, index, value):
     True
 
     """
+    #input_list[index:index+1]=[value,input_list[index]]
     
     #input_list[:index],value,input_list[index:])
+    input_list[index:index] = value
     
     return
     
