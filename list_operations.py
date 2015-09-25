@@ -18,7 +18,7 @@
 #
 # DO NOT USE ANY OF THE BUILT IN LIST METHODS, OR len(l)
 
-FURTHER_STUDY = False
+FURTHER_STUDY = True
 
 
 def head(input_list):
@@ -219,7 +219,7 @@ def delete_third_and_seventh(input_list):
 
     """
     del input_list[2]
-    del input_list[6]
+    del input_list[5]
     return
 
 
@@ -236,8 +236,8 @@ def delete_middle(input_list):
     True
 
     """
-
-    pass
+    del input_list[2:-2]
+    return
 
 
 ##############################################################################
@@ -271,8 +271,10 @@ def custom_len(input_list):
     8
 
     """
-
-    return 0
+    count = 0
+    for items in input_list:
+        count+=1
+    return count
 
 
 # For the next four exercises, you'll need to be clever and think about ways
@@ -297,8 +299,10 @@ def custom_append(input_list, value):
     True
 
     """
-
-    pass
+    list_length=custom_len(input_list)
+    input_list[list_length:] = [value]
+    return
+    
 
 
 def custom_extend(input_list, second_list):
@@ -314,8 +318,9 @@ def custom_extend(input_list, second_list):
     True
 
     """
-
-    pass
+    for items in second_list:
+        custom_append(input_list, items)
+    
 
 
 def custom_insert(input_list, index, value):
@@ -331,8 +336,11 @@ def custom_insert(input_list, index, value):
     True
 
     """
-
-    pass
+    
+    #input_list[:index],value,input_list[index:])
+    
+    return
+    
 
 
 def custom_remove(input_list, value):
